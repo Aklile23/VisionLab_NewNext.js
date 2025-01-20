@@ -1,18 +1,44 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SectionTitle from "../Common/SectionTitleForWhiteBg";
 
 const Video = () => {
   const [isOpen, setOpen] = useState(false);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-visible");
+          } else {
+            entry.target.classList.remove("fade-visible");
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when 20% of the element is visible
+    );
+
+    // Add observer to both left and right fade elements
+    const elements = document.querySelectorAll(".fade-left, .fade-right");
+    elements.forEach((el) => observer.observe(el));
+
+    // Cleanup observer
+    return () => {
+      elements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
   return (
     <section className="relative z-10 py-16 md:py-20 lg:py-28 bg-white">
       <div className="container">
-        <SectionTitle
-          title="We are ready to help"
-          paragraph="At VisionLab, innovation meets imagination. We specialize 
+        {/* SectionTitle with left-to-right animation */}
+        <div className="fade-left">
+          <SectionTitle
+            title="We are ready to help"
+            paragraph="At VisionLab, innovation meets imagination. We specialize 
                     in crafting exceptional immersive and interactive 3D content 
                     that redefines boundaries in artistry, engineering, and 
                     technology. Our expertise extends from creating bespoke 3D models 
@@ -20,11 +46,14 @@ const Video = () => {
                     are transformed into impactful realities. At VisionLab, we don’t just 
                     offer services; we forge partnerships to deliver tailored solutions that 
                     elevate your projects to extraordinary dimensions."
-          center
-          mb="80px"
-          width="1070px"
-        />
-        <div className="-mx-4 flex flex-wrap">
+            center
+            mb="80px"
+            width="1070px"
+          />
+        </div>
+
+        {/* Video Section with right-to-left animation */}
+        <div className="-mx-4 flex flex-wrap fade-right">
           <div className="w-full px-4">
             <div
               className="mx-auto max-w-[770px] overflow-hidden rounded-md"

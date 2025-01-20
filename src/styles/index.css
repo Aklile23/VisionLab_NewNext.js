@@ -31,3 +31,23 @@
     @apply opacity-100;
   }
 }
+
+/* Fade animations for scroll-triggered effects */
+
+/* Initial State */
+.fade-left,
+.fade-right {
+  opacity: 0; /* Element is invisible initially */
+  transform: translateX(-30px); /* Offset for left-to-right effect */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth transition */
+}
+
+.fade-right {
+  transform: translateX(30px); /* Offset for right-to-left effect */
+}
+
+/* Active State */
+.fade-visible {
+  opacity: 1; /* Element becomes visible */
+  transform: translateX(0); /* Move to original position */
+}

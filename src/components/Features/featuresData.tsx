@@ -14,7 +14,7 @@ const featuresData: Feature[] = [
     ),
     title: "Custom 3D Model Development for artistic and technical applications.",
     paragraph:
-      "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+      "We create tailored 3D models for artistic and technical applications, delivering precision and quality for diverse industries.",
   },
   {
     id: 1,
@@ -29,7 +29,7 @@ const featuresData: Feature[] = [
     ),
     title: "Advanced VR, AR, and Interactive Content Creation for immersive experiences.",
     paragraph:
-      "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+      "We develop innovative VR, AR, and interactive content, delivering immersive experiences that captivate, engage, and inspire audiences across various industries.",
   },
   {
     id: 1,
@@ -44,7 +44,7 @@ const featuresData: Feature[] = [
     ),
     title: "High-precision Photogrammetry and Point Cloud Processing for detailed modeling.",
     paragraph:
-      "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+      "We offer high-precision photogrammetry and point cloud processing services, producing detailed, accurate models tailored for applications in industries like architecture, engineering, and digital visualization.",
   },
   {
     id: 1,
@@ -59,7 +59,7 @@ const featuresData: Feature[] = [
     ),
     title: "AI-Driven Automation to streamline processes and enhance productivity.",
     paragraph:
-      "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+      "We provide AI-driven automation solutions designed to streamline processes, improve operational efficiency, and boost productivity. Our tailored approaches help businesses optimize workflows and achieve smarter, faster results.",
   },
   {
     id: 1,
@@ -74,7 +74,7 @@ const featuresData: Feature[] = [
     ),
     title: "Comprehensive Building Information Modeling (BIM) solutions.",
     paragraph:
-      "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+      "We offer comprehensive BIM solutions, enabling precise planning, design, and management of building projects through detailed, data-rich models.",
   },
   // {
   //   id: 1,
