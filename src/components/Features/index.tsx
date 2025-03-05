@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import SectionTitleForBlackBg from "../Common/SectionTitleForBalckBg";
 import SingleFeature from "./SingleFeature";
 import featuresData from "./featuresData";
+import TrueFocus from "../bits Components/TrueFocus";
 
 const Features = () => {
   useEffect(() => {
@@ -31,7 +32,7 @@ const Features = () => {
     <>
       <section
         id="features"
-        className="py-16 md:py-20 lg:py-28 bg-black2 relative overflow-hidden"
+        className="py-16 md:py-20 lg:py-28 bg-[#030303] relative overflow-hidden"
       >
         {/* Animated lines */}
         <div className="absolute inset-0 z-0">
@@ -49,11 +50,20 @@ const Features = () => {
         </div>
 
         <div className="container relative z-10 fade-trigger">
-          <SectionTitleForBlackBg
+          {/* <SectionTitleForBlackBg
             title="What We Do"
             paragraph="Explore our wide range of expertise, which includes:"
             center
-          />
+          /> */}
+          <TrueFocus 
+            sentence="What We Do"
+            manualMode={false}
+            blurAmount={5}
+            borderColor="white"
+            animationDuration={1}
+            pauseBetweenAnimations={1}
+            />
+            <p className="py-6 px-4 md:px-20 lg:px-44 text-base sm:text-lg md:text-xl lg:text-2xl text-center">Explore our wide range of expertise, which includes:</p>
 
           <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3 fade-trigger">
             {featuresData.map((feature) => (

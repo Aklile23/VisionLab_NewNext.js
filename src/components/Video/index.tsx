@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import SectionTitle from "../Common/SectionTitleForWhiteBg";
+import TrueFocus from "../bits Components/TrueFocus";
 
 const Video = () => {
   const [isOpen, setOpen] = useState(false);
@@ -32,11 +33,11 @@ const Video = () => {
   }, []);
 
   return (
-    <section className="relative z-10 py-16 md:py-20 lg:py-28 bg-white">
+    <section className="relative z-10 py-16 md:py-20 lg:py-28 bg-[#F8FBF8]">
       <div className="container">
         {/* SectionTitle with left-to-right animation */}
-        <div className="fade-left">
-          <SectionTitle
+        <div className="fade-left text-black2">
+          {/* <SectionTitle
             title="We are ready to help"
             paragraph="At VisionLab, innovation meets imagination. We specialize 
                     in crafting exceptional immersive and interactive 3D content 
@@ -49,7 +50,22 @@ const Video = () => {
             center
             mb="80px"
             width="1070px"
-          />
+          /> */}
+          <div className="-mt-8 mb-10">
+            <TrueFocus 
+            sentence="Who We Are"
+            manualMode={false}
+            blurAmount={5}
+            borderColor="black"
+            animationDuration={1}
+            pauseBetweenAnimations={1}
+            />
+            <p className="py-6 px-4 md:px-20 lg:px-44 text-base sm:text-lg md:text-xl lg:text-2xl text-center">
+              "At VisionLab, innovation meets imagination. We specialize in crafting exceptional immersive and interactive 3D content that redefines boundaries in artistry, engineering, and technology. Our expertise extends from creating bespoke 3D models to deploying cutting-edge AI solutions, ensuring that your ideas are transformed into impactful realities. At VisionLab, we don’t just offer services; we forge partnerships to deliver tailored solutions that elevate your projects to extraordinary dimensions."
+            </p>
+
+          </div>
+          
         </div>
 
         {/* Video Section with right-to-left animation */}
@@ -98,12 +114,12 @@ const Video = () => {
               className="w-full h-auto rounded-md"
               src="/videos/About.mp4" // Path to your video file
             ></video>
-            <button
+            {/* <button
               className="absolute top-2 right-2 text-black2"
               onClick={() => setOpen(false)}
             >
               ✕
-            </button>
+            </button> */}
           </div>
         </div>
       )}

@@ -11,7 +11,7 @@ const SingleFeature = ({ feature, className }: SingleFeatureProps) => {
   return (
     <div className={`w-full ${className}`}>
       <div className="wow fadeInUp" data-wow-delay=".15s">
-        <div className="mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-md bg-white bg-opacity-20 text-white">
+        <div className="mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-md bg-black2 bg-opacity-10 text-white">
           {icon}
         </div>
         <h3 className="mb-5 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
